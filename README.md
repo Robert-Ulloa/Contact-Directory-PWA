@@ -24,7 +24,7 @@ Before running the app, ensure you have the following installed on your system:
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/contact-directory-pwa.git
+    git clone https://github.com/Robert-Ulloa/Contact-Directory-PWA
     ```
 
 2. Navigate to the project directory:
