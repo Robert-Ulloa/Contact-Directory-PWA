@@ -4,8 +4,12 @@ const form = document.getElementById('contact-form');
 
 // Adds deleteCard() to the global scope so each card has access to it.
 window.deleteCard = (e) => {
-// Grabs the id from the button element attached to the contact card.
+  // Check if id is valid
   let id = parseInt(e.id);
+  if (isNaN(id)) {
+    console.error("Invalid ID:", e.id);
+    return;
+  }
 
   // Delete the card
   deleteDb(id);
