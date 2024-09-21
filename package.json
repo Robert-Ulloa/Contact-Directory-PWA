@@ -1,0 +1,22 @@
+{
+  "name": "mini-project-develop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run server",
+    "client": "npm --prefix client run start",
+    "build": "npm --prefix client run build",
+    "start": "npm run build && npm run server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
