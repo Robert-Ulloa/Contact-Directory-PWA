@@ -20,9 +20,9 @@ export const postDb = async (name, home, cell, email)  => {
     const db = await openDB('contact_db', 1);
     const tx = db.transaction('contacts', 'readwrite');
     const store = tx.objectStore('contacts');
-    await store.add({name, home, cell, email });
-    console.log('Contact added to the database');
-};
+    const id = await store.add({ name, home, cell, email });
+    console.log('Contact added to the database', id);
+  };
 
 // TODO: Complete the getDb() function below:
 export const getDb = async () => {
